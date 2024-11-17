@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1p8ey3snb5kx"]
+
+[ext_resource type="PackedScene" uid="uid://ckymylim3ewr7" path="res://Overlay.tscn" id="1_wcgxs"]
+[ext_resource type="PackedScene" uid="uid://cn5dbqj7lnghw" path="res://locations/Hallway.tscn" id="2_k1r1t"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Overlay" parent="." instance=ExtResource("1_wcgxs")]
+default_location = ExtResource("2_k1r1t")

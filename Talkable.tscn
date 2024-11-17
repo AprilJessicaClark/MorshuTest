@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://4h0dk3ylod1f"]
+
+[ext_resource type="Script" path="res://talkable.gd" id="1_1pm32"]
+
+[node name="Talkable" type="StaticBody2D"]
+input_pickable = true
+script = ExtResource("1_1pm32")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

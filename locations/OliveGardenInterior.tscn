@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://dg2yf2gt2y4f8"]
+
+[ext_resource type="Texture2D" uid="uid://bchiwpab13mdh" path="res://backgrounds/olive garden interior.jpg" id="1_kwwcv"]
+[ext_resource type="Texture2D" uid="uid://cnwmbotgs5x7c" path="res://Arrow-go-back-line.svg.png" id="2_pgjf6"]
+[ext_resource type="PackedScene" uid="uid://ci2t8wqi0c431" path="res://Door.tscn" id="3_j3usm"]
+[ext_resource type="Texture2D" uid="uid://6b14s8jf6o0n" path="res://characters/Morshu_overworld.png" id="4_ocugd"]
+[ext_resource type="PackedScene" uid="uid://4h0dk3ylod1f" path="res://Talkable.tscn" id="4_se627"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o6ld7"]
+radius = 31.257
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3o86u"]
+size = Vector2(203, 410.324)
+
+[node name="OliveGardenInterior" type="Node2D"]
+
+[node name="OliveGardenInterior" type="Sprite2D" parent="."]
+position = Vector2(578, 345)
+scale = Vector2(0.48117, 0.48117)
+texture = ExtResource("1_kwwcv")
+
+[node name="Door" parent="." instance=ExtResource("3_j3usm")]
+destination = "res://locations/Hallway.tscn"
+
+[node name="Arrow-go-back-line_svg" type="Sprite2D" parent="Door"]
+position = Vector2(48, 606)
+rotation = -0.446034
+scale = Vector2(0.0614969, 0.0614969)
+texture = ExtResource("2_pgjf6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+position = Vector2(44, 609)
+shape = SubResource("CircleShape2D_o6ld7")
+
+[node name="Talkable" parent="." instance=ExtResource("4_se627")]
+position = Vector2(-216.541, 438.352)
+conversation = "res://timelines/greet_morshupng.dtl"
+
+[node name="MorshuOverworld" type="Sprite2D" parent="Talkable"]
+texture_filter = 1
+position = Vector2(599.541, 98.6475)
+scale = Vector2(4.03261, 4.03261)
+texture = ExtResource("4_ocugd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Talkable"]
+position = Vector2(569.041, 113.486)
+shape = SubResource("RectangleShape2D_3o86u")

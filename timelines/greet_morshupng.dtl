@@ -1,0 +1,14 @@
+join Morshu center
+Morshu: MMMM
+label Question
+Morshu: What's up, my friend?
+- Hi Morshu
+	Morshu: Hi.
+	jump Question
+- Anything to sell?
+	Morshu: Lamp oil, rope bombs. You want it?
+	- No thanks I'm good. But I had something else I wanted to discuss.
+		jump Question
+	- No thanks. I've got to go.
+		return
+- Talk to you later.

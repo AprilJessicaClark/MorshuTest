@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://cn5dbqj7lnghw"]
+
+[ext_resource type="Texture2D" uid="uid://boer6tw808hwe" path="res://backgrounds/mall1.jpg" id="1_j4epm"]
+[ext_resource type="PackedScene" uid="uid://ci2t8wqi0c431" path="res://Door.tscn" id="3_sw4tx"]
+
+[sub_resource type="GDScript" id="GDScript_qp8il"]
+script/source = "extends Node2D
+
+@export
+var x : PackedScene;
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_door_mouse_entered() -> void:
+	pass # Replace with function body.
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1dpd"]
+size = Vector2(97, 333)
+
+[node name="Hallway" type="Node2D"]
+script = SubResource("GDScript_qp8il")
+
+[node name="Mall1" type="Sprite2D" parent="."]
+position = Vector2(576, 338)
+scale = Vector2(0.288029, 0.288029)
+texture = ExtResource("1_j4epm")
+
+[node name="Door" parent="." instance=ExtResource("3_sw4tx")]
+destination = "res://locations/OliveGardenInterior.tscn"
+portal_name = "Olive Garden"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+position = Vector2(600.5, 313.5)
+shape = SubResource("RectangleShape2D_r1dpd")
+
+[connection signal="mouse_entered" from="Door" to="." method="_on_door_mouse_entered"]
