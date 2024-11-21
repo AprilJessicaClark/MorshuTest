@@ -1,4 +1,4 @@
-extends StaticBody2D
+class_name Interactabe extends StaticBody2D
 
 signal interacted
 
