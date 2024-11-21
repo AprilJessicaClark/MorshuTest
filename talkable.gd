@@ -23,8 +23,7 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 
 func _on_mouse_entered() -> void:
 	previous_cursor = Input.get_current_cursor_shape();
-	Input.set_custom_mouse_cursor(preload("res://bubble.png"),Input.CursorShape.CURSOR_POINTING_HAND)
-	Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
+	Input.set_default_cursor_shape(Input.CursorShape.CURSOR_FORBIDDEN)
 
 
 func _on_mouse_exited() -> void:

@@ -1,18 +1,15 @@
 extends StaticBody2D
 
-@export_file
-var destination : String
+signal interacted
 
 @export
-var portal_name : String
+var mouse_over_cursor: Input.CursorShape
 
 var previous_cursor : Input.CursorShape
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print("Door to: ")
-	print(destination)
-
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -21,13 +18,11 @@ func _process(delta: float) -> void:
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_pressed():
-		Input.set_default_cursor_shape(previous_cursor);
-		LocationSwapper.swap_location(load(destination));
+		interacted.emit()
 
 
 func _on_mouse_entered() -> void:
-	previous_cursor = Input.get_current_cursor_shape();
-	Input.set_default_cursor_shape(Input.CURSOR_MOVE)
+	Input.set_default_cursor_shape(mouse_over_cursor)
 
 
 func _on_mouse_exited() -> void:
