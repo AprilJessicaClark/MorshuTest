@@ -12,4 +12,6 @@ func _process(delta: float) -> void:
 
 
 func _on_vase_interacted() -> void:
+	Dialogic.VAR.set_variable("Items.Statue", true);
+	print(Dialogic.VAR.get_variable("Items.Statue"))
 	$Statue.hide()

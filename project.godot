@@ -28,6 +28,15 @@ directories/dch_directory={
 directories/dtl_directory={
 "greet_morshupng": "res://timelines/greet_morshupng.dtl"
 }
+variables={
+"Items": {
+"Statue": false
+},
+"Morshu": {
+"Gave_Statue": false
+}
+}
+glossary/default_case_sensitive=true
 
 [display]
 

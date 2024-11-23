@@ -11,4 +11,24 @@ Morshu: What's up, my friend?
 		jump Question
 	- No thanks. I've got to go.
 		return
+- Look at this statue I found | [if {Items.Statue} == true]
+	Morshu: Woah cool
+	Morshu: Can I have it?
+	- Sure.
+		set {Items.Statue} = false
+		set {Morshu.Gave_Statue} = true
+	- No, it's mine.
+		Morshu: Mmmm.... okay.
+		jump Question
+- Can I have the statue back? | [if {Morshu.Gave_Statue} == true]
+	Morshu: MMM... maybe.
+	- Please, Morshu. I need it.
+		Morshu: Fine.
+		set {Items.Statue} = true
+		set {Morshu.Gave_Statue} = false
+		Morshu: Here you go.
+		jump Question
+	- Morshu you fat loser, give me the statue.
+		Morshu: No. Go away
+		return
 - Talk to you later.
