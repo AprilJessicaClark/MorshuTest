@@ -24,6 +24,5 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 func _on_mouse_entered() -> void:
 	Input.set_default_cursor_shape(mouse_over_cursor)
 
-
 func _on_mouse_exited() -> void:
 	Input.set_default_cursor_shape(previous_cursor)

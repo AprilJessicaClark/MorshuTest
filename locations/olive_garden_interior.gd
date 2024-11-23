@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 
 
 func _on_vase_interacted() -> void:
-	print("clicked vase")
+	$Statue.hide()
