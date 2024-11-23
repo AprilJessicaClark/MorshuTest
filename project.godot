@@ -34,6 +34,9 @@ variables={
 },
 "Morshu": {
 "Gave_Statue": false
+},
+"Olive_Garden": {
+"Took_Statue": false
 }
 }
 glossary/default_case_sensitive=true
