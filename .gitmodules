@@ -1,0 +1,3 @@
+[submodule "dialogic"]
+	path = dialogic
+	url = git@github.com:dialogic-godot/dialogic.git
