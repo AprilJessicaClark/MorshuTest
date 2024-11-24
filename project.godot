@@ -23,7 +23,8 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"Morshu": "res://characters/Morshu.dch"
+"Morshu": "res://characters/Morshu.dch",
+"unit_test_character": "res://dialogic/Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
 "greet_morshupng": "res://timelines/greet_morshupng.dtl"
